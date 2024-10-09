@@ -23,12 +23,14 @@ const Payment = () => {
             <h1 className="text-3xl font-bold text-primary">Payment for {booking.treatment}</h1>
             <p className="text-xl my-4">Please pay <strong className='text-green-500'>${booking.price}</strong> for your appointment on <strong>{booking.appointmentDate}</strong> at <strong className='text-orange-500'>{booking.slot}</strong></p>
 
-            <div className="w-96 my-12">
-                <Elements stripe={stripePromise}>
-                    <CheckoutForm
-                        booking={booking}
-                    />
-                </Elements>
+            <div className="w-96 card my-12 shadow-2xl bg-blue-900 text-white" >
+                <div className="card-body">
+                    <Elements stripe={stripePromise}>
+                        <CheckoutForm
+                            booking={booking}
+                        />
+                    </Elements>
+                </div>
             </div>
         </div>
     );

@@ -39,6 +39,7 @@ const CheckoutForm = ({ booking }) => {
             return;
         }
 
+        // eslint-disable-next-line no-unused-vars
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
             card
@@ -109,10 +110,10 @@ const CheckoutForm = ({ booking }) => {
                     options={{
                         style: {
                             base: {
-                                fontSize: '16px',
-                                color: '#424770',
+                                fontSize: '18px',
+                                color: 'white',
                                 '::placeholder': {
-                                    color: 'black',
+                                    color: 'white',
                                 },
                                 border: '1px solid #ced4da',
                                 borderRadius: '4px',
@@ -124,7 +125,7 @@ const CheckoutForm = ({ booking }) => {
                         },
                     }}
                 />
-                <button className='btn btn-primary mt-4 py-5 text-white' type="submit" disabled={!stripe || !clientSecret || processing || submitDisabled}>
+                <button className='btn btn-primary mt-4 py-5 text-white my-5' type="submit" disabled={!stripe || !clientSecret || processing || submitDisabled}>
                     {processing ? 'Processing...' : 'Pay'}
                 </button>
             </form>
