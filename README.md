@@ -21,6 +21,52 @@ Doctors Portal is a full-stack appointment booking application where users can v
 - **State Management**: tanstack/react-query
 - **Payment Processing**: Stripe (using react-stripe-js)
 
+## Project Structure
+
+- **client/**: React frontend with Tailwind CSS and DaisyUI.
+- **server/**: Express backend with routes for bookings, user management, and Stripe integration.
+
+## Key Functionality
+
+### Booking System
+
+- Users can select a date to view available services and time slots.
+- After choosing a slot, users can book an appointment.
+- Payment for booking is processed through Stripe's CardElement.
+
+### Admin Dashboard
+
+- **Manage Bookings**: Admins can view all appointments.
+- **User Management**: Admins can promote users to admin status.
+- **Doctor Management**: Admins can view and add doctors.
+
+## Dependencies
+
+### Frontend
+
+- **React**: Core frontend library.
+- **Tailwind CSS** and **DaisyUI**: Styling and UI components.
+- **react-day-picker**: For date selection in the booking system.
+- **react-hook-form**: For handling form input and validation.
+- **@tanstack/react-query**: For data fetching and server-state synchronization.
+- **@stripe/react-stripe-js**: Stripe integration for payments.
+
+### Backend
+
+- **Express**: Server framework.
+- **MongoDB**: Database for storing user, booking, and doctor data.
+- **Stripe**: Payment processing.
+
+## Usage
+
+1. **User Booking**:
+   - Navigate to the booking page, select a date, and choose a time slot.
+   - Confirm the booking and proceed to payment via Stripe.
+  
+2. **Admin Actions**:
+   - Access the dashboard to manage bookings, users, and doctors.
+
+
 ## Installation
 
 1. **Clone the repository**:
@@ -69,50 +115,6 @@ Doctors Portal is a full-stack appointment booking application where users can v
 
    The client will run on `http://localhost:3000` and the server on `http://localhost:5000`.
 
-## Project Structure
-
-- **client/**: React frontend with Tailwind CSS and DaisyUI.
-- **server/**: Express backend with routes for bookings, user management, and Stripe integration.
-
-## Key Functionality
-
-### Booking System
-
-- Users can select a date to view available services and time slots.
-- After choosing a slot, users can book an appointment.
-- Payment for booking is processed through Stripe's CardElement.
-
-### Admin Dashboard
-
-- **Manage Bookings**: Admins can view all appointments.
-- **User Management**: Admins can promote users to admin status.
-- **Doctor Management**: Admins can view and add doctors.
-
-## Dependencies
-
-### Frontend
-
-- **React**: Core frontend library.
-- **Tailwind CSS** and **DaisyUI**: Styling and UI components.
-- **react-day-picker**: For date selection in the booking system.
-- **react-hook-form**: For handling form input and validation.
-- **@tanstack/react-query**: For data fetching and server-state synchronization.
-- **@stripe/react-stripe-js**: Stripe integration for payments.
-
-### Backend
-
-- **Express**: Server framework.
-- **MongoDB**: Database for storing user, booking, and doctor data.
-- **Stripe**: Payment processing.
-
-## Usage
-
-1. **User Booking**:
-   - Navigate to the booking page, select a date, and choose a time slot.
-   - Confirm the booking and proceed to payment via Stripe.
-  
-2. **Admin Actions**:
-   - Access the dashboard to manage bookings, users, and doctors.
 
 ## License
 
@@ -123,7 +125,6 @@ This project is licensed under the MIT License.
 - [React](https://reactjs.org/)
 - [Stripe](https://stripe.com/docs) for payment integration.
 - [MongoDB](https://www.mongodb.com/)
-
 
 
 
